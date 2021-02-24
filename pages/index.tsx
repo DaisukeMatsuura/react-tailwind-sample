@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
         const data = keys.map((key, index) => {
             let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
-            const value = values[index]
+            const value: any = values[index]
             const document = matter(value.default)
             return {
                 frontmatter: document.data,

@@ -4,12 +4,12 @@ export default function Header() {
   return (
     <>
       <header className="header">
-        <nav className="nav">
+        <nav className="mb-20">
           <Link href="/">
-            <a>My Blog</a>
+            <a className="rounded-full bg-blue-400 p-4 m-10">My Blog</a>
           </Link>
           <Link href="/about">
-            <a>About</a>
+            <a className="rounded-full bg-pink-400 p-4 m-10">About</a>
           </Link>
         </nav>
       </header>

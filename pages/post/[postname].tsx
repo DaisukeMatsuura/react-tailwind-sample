@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown'
 
 import Layout from '../../components/Layout'
 
+import { GetStaticProps, GetStaticPaths } from 'next'
+
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
 
@@ -13,8 +15,8 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
           <a>Back to post list</a>
         </Link>
         <article>
-          <h1>{frontmatter.title}</h1>
-          <p>By {frontmatter.author}</p>
+          <h1 className="text-xl my-2">{frontmatter.title}</h1>
+          <p className="my-2">By {frontmatter.author}</p>
           <div>
             <ReactMarkdown source={markdownBody} />
           </div>
@@ -23,7 +25,8 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   )
 }
 
-export async function getStaticProps({ ...ctx }) {
+export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
+// export async function getStaticProps({ ...ctx }) {
   const { postname } = ctx.params
 
   const content = await import(`../../posts/${postname}.md`)
@@ -39,7 +42,8 @@ export async function getStaticProps({ ...ctx }) {
   }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
+// export async function getStaticPaths() {
   const blogSlugs = ((context) => {
     const keys = context.keys()
     const data = keys.map((key, index) => {

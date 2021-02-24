@@ -3,6 +3,8 @@ import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
 
+import { GetStaticProps } from 'next'
+
 const Index = ({ title, description, ...props }) => {
   return (
         <Layout pageTitle={title}>
@@ -16,7 +18,8 @@ const Index = ({ title, description, ...props }) => {
 
 export default Index
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
+//export async function getStaticProps() {
     const configData = await import(`../siteconfig.json`)
 
     const posts = ((context) => {

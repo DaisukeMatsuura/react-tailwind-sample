@@ -10,13 +10,23 @@ export default function PostList({ posts }) {
         {posts &&
           posts.map((post) => {
             return (
-              <li key={post.slug}>
+              <div key={post.slug} className="container mx-auto">
+                <div className="text-5xl mt-8">{post.frontmatter.title}</div>
+                <div className="flex justify-between mt-4 mb-10">
+                  <div className="text-gray-500">{post.frontmatter.date}</div>
+                  <div className="flex items-center">
+                    <img src="/daisuke.jpg" className="w-8 h-8 rounded-full mr-2"></img>
+                    <div className="">{post.frontmatter.author}</div>
+                  </div>
+                </div>
+                <div className="mt-10 mb-10">{post.frontmatter.excerpt}</div>
                 <Link href={{ pathname: `/post/${post.slug}` }}>
-                  <a>{post.frontmatter.title}</a>
+                  <a className="underline">続きを読む →</a>
                 </Link>
-              </li>
+              </div>
             )
-          })}
+          })
+        }
       </ul>
     </div>
   )

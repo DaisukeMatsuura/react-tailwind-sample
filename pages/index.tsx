@@ -8,8 +8,7 @@ import { GetStaticProps } from 'next'
 const Index = ({ title, description, ...props }) => {
   return (
         <Layout pageTitle={title}>
-          <h1 className="title">Welcome to my blog!</h1>
-          <p className="description">{description}</p>
+          <h1 className="text-lg m-4">{description}</h1>
           <main>
             <PostList posts={props.posts} />
           </main>

@@ -12,21 +12,25 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   return (
       <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
         <Link href="/">
-          <a>Back to post list</a>
+          <a className="underline">← Back to post list</a>
         </Link>
-        <article>
-          <h1 className="text-xl my-2">{frontmatter.title}</h1>
-          <p className="my-2">By {frontmatter.author}</p>
-          <div>
+        <article className="mt-10">
+          <h1 className="text-2xl my-2">{frontmatter.title}</h1>
+          <p className="mb-10">By {frontmatter.author}</p>
+          <div className="markdown">
             <ReactMarkdown source={markdownBody} />
           </div>
         </article>
+        <Link href="/">
+          <div className="flex bg-black hover:bg-gray-400 text-white hover:text-black w-20 h-10 mx-auto items-center justify-center rounded-full uppercase my-20 cursor-pointer">
+            top
+          </div>
+        </Link>
       </Layout>
   )
 }
 
 export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
-// export async function getStaticProps({ ...ctx }) {
   const { postname } = ctx.params
 
   const content = await import(`../../posts/${postname}.md`)
@@ -43,7 +47,6 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-// export async function getStaticPaths() {
   const blogSlugs = ((context) => {
     const keys = context.keys()
     const data = keys.map((key, index) => {

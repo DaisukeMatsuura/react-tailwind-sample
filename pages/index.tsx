@@ -2,17 +2,22 @@ import matter from 'gray-matter'
 
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
+import Footer from '../components/Footer'
 
 import { GetStaticProps } from 'next'
 
 const Index = ({ title, description, ...props }) => {
   return (
-        <Layout pageTitle={title}>
-          <h1 className="text-lg m-4">{description}</h1>
-          <main>
-            <PostList posts={props.posts} />
-          </main>
-        </Layout>)
+        <>
+          <Layout pageTitle={title}>
+            <h1 className="text-lg">{description}</h1>
+            <main>
+              <PostList posts={props.posts} />
+            </main>
+          </Layout>
+          <Footer />
+        </>
+        )
 }
 
 export default Index

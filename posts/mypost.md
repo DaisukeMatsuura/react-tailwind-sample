@@ -17,8 +17,16 @@ Humblebrag sartorial man braid ad vice, wolf ramps in cronut proident cold-press
 ## これはH2タグです
 ###### これはH6タグです
 
-```ruby:qiita.rb
-puts 'deference 0 o 1 l q 9 '
+```
+
+   N = int(input())
+   A = map(int, input().split())
+   A = list(A)
+   ans = float(0)
+   for a in A:
+      ans += 1/a
+   print(1/ans)
+
 ```
 
 >引用（blockquote）

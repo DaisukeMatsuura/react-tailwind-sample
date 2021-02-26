@@ -10,3 +10,21 @@ Humblebrag sartorial man braid ad vice, wolf ramps in cronut proident cold-press
 - Look at me
 - I am in a list
 - Woo hoo
+
+`hogehoge` と書いた時の表示の確認
+
+# これはH1タグです
+## これはH2タグです
+###### これはH6タグです
+
+```ruby:qiita.rb
+puts 'deference 0 o 1 l q 9 '
+```
+
+>引用（blockquote）
+
+> This is the first level of quoting.
+> 
+> > This is nested blockquote.
+> 
+> Back to the first level.

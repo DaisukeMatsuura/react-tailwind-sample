@@ -18,5 +18,6 @@
 ・gray-matter v4.0.2
 ・raw-loader v4.0.2
 ・react-markdown v5.0.3
+・react-syntax-highlighter v15.4.3
 ```
 

@@ -2,9 +2,14 @@ import Link from 'next/link'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 
+import CodeBlock from "../../components/CodeBlock"
 import Layout from '../../components/Layout'
 
 import { GetStaticProps, GetStaticPaths } from 'next'
+
+interface P {
+  markdown: string
+}
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
@@ -18,7 +23,10 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
           <h1 className="text-2xl my-2">{frontmatter.title}</h1>
           <p className="mb-10">By {frontmatter.author}</p>
           <div className="markdown">
-            <ReactMarkdown source={markdownBody} />
+            <ReactMarkdown
+              source={markdownBody}
+              renderers={{ code: CodeBlock }}
+            />
           </div>
         </article>
         <Link href="/">

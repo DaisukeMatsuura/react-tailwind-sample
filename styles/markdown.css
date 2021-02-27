@@ -51,7 +51,7 @@
   }
   /* Paragraph */
   .markdown p {
-    @apply mb-4;
+    @apply mb-4 leading-8 md:leading-10 ;
   }
   /* Lists */
   .markdown ul,
@@ -82,7 +82,7 @@
      <pre><code>...
   */
   .markdown :not(pre) > code {
-    @apply bg-indigo-50 p-2 rounded-lg ;
+    @apply bg-indigo-50 p-1 font-semibold text-gray-600 rounded-lg ;
   }
 
   .markdown pre {

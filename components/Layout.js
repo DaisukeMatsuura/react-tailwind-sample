@@ -10,7 +10,7 @@ export default function Layout({ children, pageTitle, ...props }) {
       </Head>
       <Header />
       <section>
-        <div className="m-20 lg:mx-40 xl:mx-64 2xl:mx-80 font-sans">{children}</div>
+        <div className="m-8 md:mx-14 lg:mx-40 xl:mx-64 2xl:mx-80 font-sans">{children}</div>
       </section>
 
     </>

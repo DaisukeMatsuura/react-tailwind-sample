@@ -11,7 +11,7 @@ export default function PostList({ posts }) {
           posts.map((post) => {
             return (
               <div key={post.slug} className="container mx-auto">
-                <div className="text-5xl mt-8">{post.frontmatter.title}</div>
+                <div className="text-3xl mt-8">{post.frontmatter.title}</div>
                 <div className="flex justify-between mt-4 mb-10">
                   <div className="text-gray-500">{post.frontmatter.date}</div>
                   <div className="flex items-center">

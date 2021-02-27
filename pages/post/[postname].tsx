@@ -20,8 +20,14 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
           <a className="underline">← Back to post list</a>
         </Link>
         <article className="mt-10">
-          <h1 className="text-2xl my-2">{frontmatter.title}</h1>
-          <p className="mb-10">By {frontmatter.author}</p>
+          <h1 className="text-2xl mb-4">{frontmatter.title}</h1>
+          <div className="flex justify-between mb-6">
+            <div className="text-gray-500">{frontmatter.date}</div>
+            <div className="flex items-center">
+              <div className="">By {frontmatter.author}</div>
+              <img src="/daisuke.jpg" className="w-8 h-8 rounded-full ml-2"></img>
+            </div>
+          </div>
           <div className="markdown">
             <ReactMarkdown
               source={markdownBody}

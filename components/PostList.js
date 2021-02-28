@@ -15,7 +15,7 @@ export default function PostList({ posts }) {
                 <div className="flex justify-between mt-4 mb-10">
                   <div className="text-gray-500">{post.frontmatter.date}</div>
                   <div className="flex items-center">
-                    <img src="/daisuke.jpg" className="w-8 h-8 rounded-full mr-2"></img>
+                    <img src="/daisuke.png" className="w-8 h-8 rounded-full border mr-2"></img>
                     <div className="">{post.frontmatter.author}</div>
                   </div>
                 </div>

@@ -25,7 +25,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
             <div className="text-gray-500">{frontmatter.date}</div>
             <div className="flex items-center">
               <div className="">By {frontmatter.author}</div>
-              <img src="/daisuke.jpg" className="w-8 h-8 rounded-full ml-2"></img>
+              <img src="/daisuke.png" className="w-8 h-8 rounded-full border ml-2"></img>
             </div>
           </div>
           <div className="markdown">

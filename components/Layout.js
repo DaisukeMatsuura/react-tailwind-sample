@@ -5,6 +5,14 @@ export default function Layout({ children, pageTitle, ...props }) {
   return (
     <>
       <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT3N9ZGJNG"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-ZT3N9ZGJNG');
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:url" content="https://happy-banach-3631af.netlify.app/" />
         <meta property="og:type" content="blog" />

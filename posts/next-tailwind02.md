@@ -5,7 +5,7 @@ date: '2021年3月1日'
 excerpt: 'それでは、早速 Next.js のインストールから行なっていきたいと思います。とその前に、Next.js アプリを作成するためには Node.js をインストールしておく必要があります。公式ドキュメントによりますと、Node.js 10.13 以上の...'
 ---
 
-※本記事はNext.jsの開発環境の構築および、TailwindCSSのセットアップとNext.jsのルーティングの確認をする内容となっております。CSSを自作でされる方や基本的なセットアップがお済みの方は[次の記事]()に移動してください！
+※本記事はNext.jsの開発環境の構築および、TailwindCSSのセットアップとNext.jsのルーティングの確認をする内容となっております。CSSを自作でされる方や基本的なセットアップがお済みの方は[次の記事]()に移動してください！(次の記事は現在作成中ですm(. . ;)m )
 
 # ｜環境構築
 それでは、早速`Next.js`のインストールから行なっていきたいと思います。  
@@ -17,7 +17,7 @@ excerpt: 'それでは、早速 Next.js のインストールから行なって�
 ```
  npx create-next-app [project-name]
 ```
-`[project-name]`の部分はご自身でお好きな名前を付けてください！  
+`[project-name]`の部分はご自身でお好きな名前を付けてください！[]は不要です。  
 以下のような文言が出ていれば完了です！
 ```
 Success! Created sample at /保存先/[project-name]
@@ -39,7 +39,7 @@ We suggest that you begin by typing:
 ```
 一度`Next.js`のTOP画面を拝んでおきましょう！
 ```
- cd [project-name]  //アプリのディレクトリに移動して
+ cd [project-name]  // アプリのディレクトリに移動して
  npm run dev        // または yarn dev でもいいです
 ```
 すると、コンパルが始まって、しばらく経つと`compiled successfully`という文字が表示されると思いますので、ブラウザから `http://localhost:3000` にアクセスすると以下のようなTOPページが確認できるかと思います！
@@ -103,7 +103,7 @@ export default function Home() {
 export default function Home() {
   return (
     <div className="text-red-400">
-      Hello World!!
+      Hello World!
     </div>
   )
 }
@@ -120,7 +120,7 @@ React で class を付与させるには class="hoge" と書くのではなく�
 `npm run dev` は止めずに、そのままで進めていきましょう！止めた方は、再度実行しておいてください！  
 それでは、まず`pages`ディレクトリ内に`about.js`ファイルを作成してください。そして、以下のように書き加えてください。
 ```
-// pages/about/js
+// pages/about.js
 const About = () => {
   return (
     <div className="text-center mt-10">

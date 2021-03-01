@@ -8,7 +8,7 @@ export default function Layout({ children, pageTitle, ...props }) {
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT3N9ZGJNG"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag(){dataLayer.push(arguments)}
           gtag('js', new Date());
 
           gtag('config', 'G-ZT3N9ZGJNG');

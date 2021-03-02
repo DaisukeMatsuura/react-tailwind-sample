@@ -5,7 +5,7 @@ date: '2021年3月1日'
 excerpt: 'それでは、早速 Next.js のインストールから行なっていきたいと思います。とその前に、Next.js アプリを作成するためには Node.js をインストールしておく必要があります。公式ドキュメントによりますと、Node.js 10.13 以上の...'
 ---
 
-※本記事はNext.jsの開発環境の構築および、TailwindCSSのセットアップとNext.jsのルーティングの確認をする内容となっております。CSSを自作でされる方や基本的なセットアップがお済みの方は[次の記事]()に移動してください！(次の記事は現在作成中ですm(. . ;)m )
+※本記事はNext.jsの開発環境の構築および、TailwindCSSのセットアップとNext.jsのルーティングの確認をする内容となっております。CSSを自作でされる方や基本的なセットアップがお済みの方は[次の記事](/post/next-tailwind03)に移動してください！
 
 # ｜環境構築
 それでは、早速`Next.js`のインストールから行なっていきたいと思います。  
@@ -42,7 +42,7 @@ We suggest that you begin by typing:
  cd [project-name]  // アプリのディレクトリに移動して
  npm run dev        // または yarn dev でもいいです
 ```
-すると、コンパルが始まって、しばらく経つと`compiled successfully`という文字が表示されると思いますので、ブラウザから `http://localhost:3000` にアクセスすると以下のようなTOPページが確認できるかと思います！
+すると、コンパイルが始まって、しばらく経つと`compiled successfully`という文字が表示されると思いますので、ブラウザから `http://localhost:3000` にアクセスすると以下のようなTOPページが確認できるかと思います！
 ![トップ画像](/images/top_page.png)
 やりましたね！ ^^v  
 次に`TailwindCSS`のセットアップに移りましょう！  
@@ -113,7 +113,7 @@ export default function Home() {
 ![HelloWorld](/images/hello_world.png)
 `赤字`で Hello World!! が表示されましたね ^^v  
 React で class を付与させるには class="hoge" と書くのではなく、`className="hoge"`と書く必要があります。  
-今回の divタグ内の`text-red-400`は TailwindCSS のクラスで、文字色を赤の400にするというものです。色見本については [TailwindCSS公式ドキュメント](https://tailwindcss.com/docs/customizing-colors) で確認して見てください！また、他のどのようなクラスがあるのかも見てみてください〜
+今回の divタグ内の`text-red-400`は TailwindCSS のクラスで、文字色を赤の400にするというものです。色見本については [TailwindCSS公式ドキュメント](https://tailwindcss.com/docs/customizing-colors) で確認してみてください！また、他のどのようなクラスがあるのかも見てみてください〜
 
 少し長くなってきましたが...  
 続いて、簡単にルーティングについても確認しておきたいと思います。  
@@ -139,3 +139,5 @@ Next.js は /pages ディレクトリに js のエクスポートファイルを
 次回は不要ファイルを削除し、ディレクトリの構成を整えます。コンポーネント分割についても考えようと思います。  
 それから サイト情報を乗せた json ファイルのインポートおよびその情報の表示、Next.js のダイナミックルーティングについての構築あたりをやっていこうと思います！  
 それでは乞うご期待 ^^/
+
+[続きを読む→](/post/next-tailwind03)

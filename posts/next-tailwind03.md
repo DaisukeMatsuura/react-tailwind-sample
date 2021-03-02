@@ -6,7 +6,7 @@ excerpt: 'では、早速コーディングをしていきましょう！と、�
 削除後に残るディレクトリやファイルは以下のようになりますので、それ以外のファイルは削除し...'
 ---
 
-※本記事は、JSONファイルのローディングとgetStaticProps()によるpropsの取得と引き渡し部分の解説、Layoutコンポーネントの作成と確認と行った内容となっております。  
+※本記事は、JSONファイルのローディングとgetStaticProps()によるpropsの取得と引き渡し部分の解説、Layoutコンポーネントの作成と確認といった内容となっております。  
 初期の設定からご覧になられたい方は[こちら](/post/next-tailwind02)にお戻りください。
 MDファイルのローディング部分からご覧になられたい方は[次の記事]()に移動してください！(次の記事は現在作成中ですm(. . ;)m )
 
@@ -74,9 +74,9 @@ export async function getStaticProps() {
 }
 ```
 ![コンフィグの内容を表示](/images/siteconfig.png)
-上記のような形でJSONファイル内に書かれた内容を表示することができたでしょうか？  
+上の画像ような形でJSONファイル内に書かれた内容を表示することができたでしょうか？  
 今回記述した内容の中で`getStaticProps()`について`簡単に`解説しておきます。  
-getStaticProps()はNext.jsが用意しているファンクションで、そのファンクション内で返却したデータをビルド時にページコンポーネントに引き渡す役割を担ってくれています。今回のソースコード内でのことをザックリと捉えると、props というものの中に`title`と`description`という変数としてsiteconfig.jsonのデータを取得・格納し、Indexページのコンポーネント内に引き渡すということを行なっています。それを経て画面に表示されているということなんですね^^  
+getStaticProps()はNext.jsが用意しているファンクションで、そのファンクション内で返却したデータをビルド時にページコンポーネントに引き渡す役割を担ってくれています。今回のソースコード内でのことをザックリと捉えると、props というものの中に`title`と`description`という変数で siteconfig.json のデータを取得・格納し、Indexページのコンポーネント内に引き渡すということを行なっています。それを経て画面に表示されているということなんですね^^  
 `getStaticProps()`について、詳しくは[Next公式データフェッチ](https://nextjs.org/docs/basic-features/data-fetching)の部分をご参照いただければと思います。
 
 ### ●レイアウトの作成
@@ -84,6 +84,7 @@ getStaticProps()はNext.jsが用意しているファンクションで、その
 まず、`components`フォルダをpagesと同階層に作成してください。その中に、`Header.js`、`Footer.js`、`Layout.js`、`PostList.js`の４ファイルを空の状態でいいので作成してください。  
 そのあと、`Layout.js`を以下のように編集していってください。
 ```
+// components/Layout.js
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -119,7 +120,7 @@ export default function Layout({ children, pageTitle, ...props }) {
 
 - __<Link>コンポーネント__
 
-続いて、`next/link`から読み込んでいる`<Link>`コンポーネント内ですが、シンプルに飛ばしたい先のリンクを作成することができます。
+続いて、`next/link`から読み込んでいる`<Link>`コンポーネント内ですが、シンプルに捉えると、飛ばしたい先のリンクを作成することができます。
 
 - __{children}パーツ__
 
@@ -129,6 +130,7 @@ export default function Layout({ children, pageTitle, ...props }) {
 では、`pages/index.js`で先ほどの`Layout`コンポーネントを読み込み、コンテンツを表示させてみましょう！以下のように変更してください。
 
 ```
+// pages/index.js
 import Layout from '../components/Layout'
 
 const Index = () => {
@@ -156,7 +158,7 @@ export async function getStaticProps() {
 編集を保存したあと、`http://localhost:3000`にアクセスすると以下のような画面が表示されていれば成功です！
 ![レイアウトコンポーネントの表示](/images/layout.png)
 
-少し長くなってしまったので、コンポーネントの分割については次回書くこととします ^^/
+少し長くなってしまったので、コンポーネントの分割については次回書くことにします ^^/
 
 ###### ＜次回予告＞
 次回は、今回のやり残しであるコンポーネント分割の方法とダイナミックルーティングについて解説していこうと思います！  

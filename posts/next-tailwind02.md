@@ -44,6 +44,7 @@ We suggest that you begin by typing:
 ```
 すると、コンパイルが始まって、しばらく経つと`compiled successfully`という文字が表示されると思いますので、ブラウザから `http://localhost:3000` にアクセスすると以下のようなTOPページが確認できるかと思います！
 ![トップ画像](/images/top_page.png)
+
 やりましたね！ ^^v  
 次に`TailwindCSS`のセットアップに移りましょう！  
 ターミナルにて以下のコマンドを入力
@@ -111,6 +112,7 @@ export default function Home() {
 変更後、ターミナルで`npm run dev`を実行してください。※コマンドを実行する場所はアプリのあるディレクトリ内でです。  
 実行後に`http://localhost:3000`にアクセスすると...
 ![HelloWorld](/images/hello_world.png)
+
 `赤字`で Hello World!! が表示されましたね ^^v  
 React で class を付与させるには class="hoge" と書くのではなく、`className="hoge"`と書く必要があります。  
 今回の divタグ内の`text-red-400`は TailwindCSS のクラスで、文字色を赤の400にするというものです。色見本については [TailwindCSS公式ドキュメント](https://tailwindcss.com/docs/customizing-colors) で確認してみてください！また、他のどのようなクラスがあるのかも見てみてください〜

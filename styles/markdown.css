@@ -76,6 +76,10 @@
   .markdown blockquote > p {
     @apply mb-0;
   }
+  /* Images */
+  .markdown img {
+    @apply shadow-lg;
+  }
 
   /* Wrap any inline highlights `that are really long`, but don't modify
      the setting for codeblocks (inside ```), which are rendered in as:

@@ -6,12 +6,12 @@ export default function Layout({ children, pageTitle, ...props }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:url" content="https://happy-banach-3631af.netlify.app/" />
+        <meta property="og:url" content="https://brightful.ga/" />
         <meta property="og:type" content="blog" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content="Next.js と TailwindCSS を使ってBlogを構築し Netlify にデプロイする方法を解説するブログ！" />
         <meta property="og:site_name" content="BrightfulBlog" />
-        <meta property="og:image" content="https://happy-banach-3631af.netlify.app/daisuke.png" />
+        <meta property="og:image" content="https://brightful.ga/daisuke.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@daisuke_phper" />
         <title>{pageTitle}</title>

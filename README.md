@@ -8,7 +8,28 @@
 上記 Next.js+TailwindCSS製のブログ構築の方法については下記デモページにて解説していこうと思う ^^b
 
 ## デモページ
-[Next-Tailwind製BLOG](https://happy-banach-3631af.netlify.app/)
+[Next-Tailwind製BLOG](https://brightful.ga/)
+
+●第１回●  
+ブログシステムの概要と使用ライブラリの説明  
+[記事に進む→](https://brightful.ga/post/next-tailwind01)
+
+●第２回●  
+Next.js および TailwindCSS のインストール  
+[記事に進む→](https://brightful.ga/post/next-tailwind02)
+
+●第３回●  
+レイアウトの作成とgetStaticProps()の説明  
+[記事に進む→](https://brightful.ga/post/next-tailwind03)
+
+●第４回●  
+コンポーネント分割と動的ルートの説明  
+[記事に進む→](https://brightful.ga/post/next-tailwind04)
+
+●第５回●  
+マークダウンファイルの読み込みライブラリのインストールと読み込みテスト  
+[記事に進む→](https://brightful.ga/post/next-tailwind05)
+
 
 ## 技術要件
 ```

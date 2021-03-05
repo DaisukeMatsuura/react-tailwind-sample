@@ -42,7 +42,7 @@ yarn.lock
 コンポーネント分割の前に、JSONファイルを読み込んで画面にデータを表示するということをしてみましょう。  
 tailwind.config.js と同じ階層に`siteconfig.json`ファイルを作成し、以下のような記述をします。
 ```
-// siteconfig.json
+// siteconfig.json（このコメント行は記述しないでください）
 {
   "title": "ブログのタイトルを記述",
   "description": "ブログの概要をここに記述"
@@ -108,7 +108,7 @@ export default function Layout({ children, pageTitle, ...props }) {
             </Link>
           </nav>
         </header>
-        <div className="bg-yellow-300 h-10">{children}</div>
+        <div className="bg-yellow-300 h-20">{children}</div>
       </section>
       <footer className="bg-green-300 text-center h-10">Footerのテキスト</footer>
     </>
@@ -135,14 +135,12 @@ export default function Layout({ children, pageTitle, ...props }) {
 // pages/index.js
 import Layout from '../components/Layout'
 
-const Index = () => {
+const Index = ({ title, description }) => {
   return (
-    <>
       <Layout pageTitle={title}>
         <div>ここがLayoutコンポーネントのChildren部分です</div>
         <div>{description}</div>
       </Layout>
-    </>
   )
 }
 export default Index

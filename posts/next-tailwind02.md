@@ -47,7 +47,8 @@ We suggest that you begin by typing:
 
 やりましたね！ ^^v  
 次に`TailwindCSS`のセットアップに移りましょう！  
-ターミナルにて以下のコマンドを入力
+ターミナルにて以下のコマンドを入力  
+`(※以下のコマンドはプロジェクトディレクトリ内で入力してください)`
 ```
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```

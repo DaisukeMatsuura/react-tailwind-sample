@@ -21,7 +21,7 @@ export default function PostList({ posts }) {
                     <div>{post.frontmatter.author}</div>
                   </div>
                 </div>
-                <div className="mt-8 mb-10 text-justify">{post.frontmatter.excerpt}</div>
+                <div className="mt-3 mb-4 text-justify">{post.frontmatter.excerpt}</div>
                 <Link href={{ pathname: `/post/${post.slug}` }}>
                   <a className="underline hover:text-blue-800">続きを読む →</a>
                 </Link>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<url>
+  <loc>https://brightful.ga/</loc>
+  <priority>1.0</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/about</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/post/next-tailwind01</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/post/next-tailwind02</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/post/next-tailwind03</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/post/next-tailwind04</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/post/next-tailwind05</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/post/next-tailwind06</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://brightful.ga/post/next-tailwind07</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+</urlset>

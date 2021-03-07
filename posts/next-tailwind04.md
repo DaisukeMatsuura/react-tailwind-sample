@@ -22,7 +22,7 @@ components/
   - PostList.js // 空ファイル
 ```
 また、`Layout.js`ファイル内の Layoutファンクションが返却している部分は以下のようになっているかと思います。
-```
+```javascript
 // components/Layout.js の Layoutファンクション return()内
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -45,7 +45,7 @@ components/
 ```
 この部分を`Header.js`と`Footer.js`に分割していきたいと思います。  
 まずは Header から分けていきましょう！先ほどのコードの`<header>`タグの始まりから終わりまでを切り取りし、Header.jsファイルを以下のように書き加えます。
-```
+```javascript
 // components/Header.js
 import Link from 'next/link'
 export default function Header() {
@@ -64,7 +64,7 @@ export default function Header() {
 }
 ```
 その次に`Layout.js`ファイル内で、今ほど作った Header コンポーネントを読み込んでいきましょう！
-```
+```javascript
 // components/Layout.js
 import Head from 'next/head'
 import Header from '../components/Header' // ←追記
@@ -92,7 +92,7 @@ export default function Layout({ children, pageTitle }) {
 
 では、私の方もやっていきます！  
 `Footer.js`ファイルを以下のように書き加えます。
-```
+```javascript
 // components/Footer.js
 export default function Footer() {
   return (
@@ -103,7 +103,7 @@ export default function Footer() {
 }
 ```
 Header の時と同様に `Layout.js` で読み込みます。
-```
+```javascript
 // components/Layout.js
 import Head from 'next/head'
 import Header from '../components/Header'
@@ -129,7 +129,7 @@ export default function Layout({ children, pageTitle }) {
 以上のような感じでコンポーネントの分割を行なっていくことができます！
 なぜ分割を行うの？という疑問が浮かんだ方もいらっしゃると思いますので、この作ったものを他のページで再利用する中で少しでも良さを実感してみようと思います！  
 ということで、"about" としか表示のされないアバウトページにレイアウトを反映させてみましょう！`about.js`を以下のように編集してみてください！
-```
+```javascript
 import Layout from '../components/Layout'
 
 const About = () => {
@@ -176,7 +176,7 @@ pages/
  - index.js
 ```
 その次に、`[post].js`の中身を以下のようにしてください。
-```
+```javascript
 // [post].js
 import { useRouter } from 'next/router'
 const Post = () => {

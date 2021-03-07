@@ -8,14 +8,14 @@ excerpt: 'ブログシステムの構築も終盤となってまいりました�
 ---
 
 ※本記事は、各ページの表示コンテンツの加筆修正とデザイン部分の修正をおこなっていく内容となっております。  
-本記事を既に読まれたという方は[次の記事]()に移動してください！(次の記事は現在作成中ですm(. . ;)m )
+本記事を既に読まれたという方は[次の記事](/post/next-tailwind07)に移動してください！
 
 # ｜表示コンテンツの整理
 ブログシステムの構築も終盤となってまいりました！もうしばらくお付き合いください。  
 それではやっていきましょう！まずは、トップページに表示するコンテンツを考えていきます。
 トップページでは、ブログ記事の一覧と、記事へのリンクを設置していきたいと思います！  
 `components/PostList.js`を開き、以下のように記述してください。
-```
+```javascript
 // PostList.js
 import Link from 'next/link'
 
@@ -54,7 +54,7 @@ export default function PostList({ posts }) {
 }
 ```
 それから、`pages/index.js`を以下のように修正してください。
-```
+```javascript
 // index.js
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
@@ -105,7 +105,7 @@ export async function getStaticProps() {
 }
 ```
 また、記事の概要についてもリスト内で表示させたいので`mypost.md`ファイルの FrontMatter 部分に`excerpt`項目を追加してください。
-```
+```markdown
 // mypost.md (※この行は含めないでください！)
 ---
 title: 'ブログのタイトル'
@@ -126,7 +126,7 @@ excerpt: 'ブログ記事の概要をここに記述ブログ記事の概要を�
 現在、記事の件数（マークダウンファイルの枚数）は１件しかありません。この状態では複数ある場合の画面を確認できないので、
 `posts`ディレクトリに別のマークダウンファイルを作成してみましょう！  
 `another_post.md`ファイルを作成し、中身を記述してください。
-```
+```markdown
 ---
 title: 'ブログのタイトル②'
 author: 'ブログの筆者②'
@@ -139,7 +139,7 @@ excerpt: 'ブログ記事の概要をここに記述②ブログ記事の概要�
 `Lyaout.js`で{children}の div に`h-20`が当たっているのが原因なのですが、レイアウトの修正自体は後でおこなっていくので、心配しないでください！  
 気になってムズムズが止まらない方は、`<div className="bg-yellow-300 h-20">{children}</div>`の`h-20`を削除しておいてください！  
 次に、ブログ記事詳細ページも修正をしていきましょう。`[post].js`ファイルを開き、下記のようにしてください。
-```
+```javascript
 // [post].js
 import Link from 'next/link'
 import matter from 'gray-matter'
@@ -208,7 +208,7 @@ export async function getStaticPaths() {
 ### ●デザイン修正
 表示コンテンツの整理（文言等は未修正だが...）はできましたので、次に、デザインの修正に取り掛かっていきましょう！  
 まずは、Header から修正します。`Header.js`を開き、以下のように修正してください。
-```
+```javascript
 // Header.js
 import Link from 'next/link'
 export default function Header() {
@@ -227,7 +227,7 @@ export default function Header() {
 }
 ```
 続いて、Footer の修正をしましょう！`Footer.js`を開き、以下のように修正してください。
-```
+```javascript
 // Footer.js
 import Link from 'next/link'
 export default function Footer() {
@@ -253,7 +253,7 @@ export default function Footer() {
 }
 ```
 続いて`Layout.js`の修正を行います！以下のように変更してください。
-```
+```javascript
 // Layout.js
 import Head from 'next/head'
 import Header from '../components/Header'
@@ -282,7 +282,7 @@ export default function Layout({ children, pageTitle }) {
 ![デザイン後](/images/after_design.png)
 最後に、記事詳細のデザインを少しだけ整えましょう！
 `[post].js`の BlogPostファンクションを以下のように修正してください。
-```
+```javascript
 // [post].js の BlogPost ファンクションを修正
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
@@ -311,5 +311,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 次回は、マークダウン部分のデザインを反映させていきましょう！
 また、コードブロックはコードが読みやすいようにシンタックスハイライトが入るようにしたいと思います！  
 ここまでできたら、Netlify にデプロイしましょう！
-可能であれば、無料ですので、Netlify のアカウントを作成しておいて頂けますと次回の作業がスムーズに進みます〜  
+可能であれば、無料ですので、Netlify のアカウントを作成しておいて頂けますと次回以降の作業がスムーズに進みます〜  
 それでは乞うご期待 ^^/
+
+[続きを読む→](/post/next-tailwind07)

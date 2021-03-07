@@ -58,7 +58,7 @@ npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 npx tailwindcss init -p
 ```
 生成された`tailwind.config.js`ファイルを編集していきましょう。生成時は`purge`の値が空っぽになっているかと思いますので、以下のように追記します。
-```
+```javascript
 // tailwind.config.js
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -74,7 +74,7 @@ module.exports = {
 ```
 続いて`CSS`ファイルにTailwindCSSの設定を読み込むように変更します。  
 `/styles`ディレクトリ内にある`globals.css`を開き、中身を全て消去し、以下の３行に書き換えてください。
-```
+```css
 /* ./styles/globals.css */
 @tailwind base;
 @tailwind components;
@@ -84,7 +84,7 @@ module.exports = {
 もし、他のCSSファイルを作成した時は、適宜読み込みを行なってください！  
 ということで、一応確認のためと Next.js の動きの確認のために`Hello World!!`を表示させてみましょう！  
 `pages/index.js`ファイルを開いてください。以下のようになっているかと思います。
-```
+```javascript
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
@@ -101,7 +101,7 @@ export default function Home() {
 }
 ```
 このファイルのインポート部分の削除と`Home()`ファンクションの return の中の`<Head>`タグから`</footer>`を全て消去し、以下のように書き換えてください。
-```
+```javascript
 export default function Home() {
   return (
     <div className="text-red-400">
@@ -122,7 +122,7 @@ React で class を付与させるには class="hoge" と書くのではなく�
 続いて、簡単にルーティングについても確認しておきたいと思います。  
 `npm run dev` は止めずに、そのままで進めていきましょう！止めた方は、再度実行しておいてください！  
 それでは、まず`pages`ディレクトリ内に`about.js`ファイルを作成してください。そして、以下のように書き加えてください。
-```
+```javascript
 // pages/about.js
 const About = () => {
   return (

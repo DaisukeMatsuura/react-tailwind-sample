@@ -9,7 +9,7 @@ npm install react-markdown gray-matter raw-loader ...'
 
 ※本記事は、マークダウンをローディングするためのライブラリのセットアップと読み込みの確認、記述したプログラムの説明をおこなっています。  
 ライブラリについての概要については[こちら](/post/next-tailwind01)にお戻りください。  
-本記事を既に読まれたという方は[次の記事](/post/next-tailwind05)に移動してください！
+本記事を既に読まれたという方は[次の記事](/post/next-tailwind06)に移動してください！
 
 # ｜ローダーのセットアップ
 まずは、３つのライブラリをインストールしていきます。  
@@ -21,7 +21,7 @@ npm install react-markdown gray-matter raw-loader
 package.json がある階層と同じ場所に`next.config.js`ファイルを作成してください。
 `next.config.js`ですよ！nextconfig.js ではないですからね... このドット(.)が無いだけで私は２時間も時間を溶かしてしまいました(T.T)  
 ファイル作成ができたら、以下のように記述してください。
-```
+```javascript
 // next.config.js
 module.exports = {
   target: 'serverless',
@@ -37,7 +37,7 @@ module.exports = {
 次に、読み込み用のマークダウンファイルを作成していきます。  
 public などと同じトップの階層に`posts`ディレクトリを作成し、その中に`mypost.md`ファイルを作成し、以下のように記述してください。
 改行用に各行の末尾に半角スペース２個含まれたりしていますのでコピペしてしまってください。
-```
+```markdown
 ---
 title: 'ブログのタイトル'
 author: 'ブログの筆者'
@@ -51,7 +51,7 @@ author: 'ブログの筆者'
 ```
 最後にこのマークダウンファイルを読み取る部分の作成をしていきましょう！  
 `[post].js`を編集しましょう！少し長いですが以下のように書き換えてください。
-```
+```javascript
 // [post].js
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
@@ -118,14 +118,14 @@ export async function getStaticPaths() {
 今回のものでいうとマークダウンファイルのデータを取得・解析し、[post].js のページに引き渡す役割を担っているという感じでしょうか。  
 今回返却しているデータは`frontmatter`と`markdownBody`の２つです。 
 frontmatter には何が入っているのかというと、mypost.md ファイルの冒頭で記述した
-```
+```markdown
 ---
 title: 'ブログのタイトル'
 author: 'ブログの筆者'
 ---
 ```
 の部分（FrontMatter）を`gray-matter`というライブラリを用いて解析し、以下のようなJSONデータとして返却しています。
-```
+```json
 {title: 'ブログのタイトル', author: 'ブログの筆者'}
 ```
 また、markdownBody の中には、マークダウンファイルで記述した FromtMatter より下のテキストが

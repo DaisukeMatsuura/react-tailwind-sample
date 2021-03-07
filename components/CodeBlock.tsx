@@ -3,12 +3,13 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { base16AteliersulphurpoolLight } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 interface P {
+  language: string,
   value: string
 }
 
-const CodeBlock: React.FC<P> = ({ value }) => {
+const CodeBlock: React.FC<P> = ({ language, value }) => {
   return (
-    <SyntaxHighlighter language='javascript' style={base16AteliersulphurpoolLight}>
+    <SyntaxHighlighter language={language} style={base16AteliersulphurpoolLight}>
       {value}
     </SyntaxHighlighter>
   )

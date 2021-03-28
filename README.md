@@ -30,6 +30,17 @@ Next.js および TailwindCSS のインストール
 マークダウンファイルの読み込みライブラリのインストールと読み込みテスト  
 [記事に進む→](https://brightful.ga/post/next-tailwind05)
 
+●第６回●  
+各ページのコンテンツの整理とデザインの修正  
+[記事に進む→](https://brightful.ga/post/next-tailwind06)
+
+●第７回●  
+読み込まれた記事のコードブロックにシンタックスハイライトを導入  
+[記事に進む→](https://brightful.ga/post/next-tailwind07)
+
+●第８回●  
+作成したブログシステムをNetlifyにデプロイ  
+[記事に進む→](https://brightful.ga/post/next-tailwind08)
 
 ## 技術要件
 ```
